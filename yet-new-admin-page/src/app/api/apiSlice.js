@@ -64,6 +64,20 @@ export const apiSlice = createApi({
         body: HelperData,
       }),
     }),
+    createBus: builder.mutation({
+      query: (BusData) => ({
+        url: '/admin/create-bus',
+        method: 'POST',
+        body: BusData,
+      }),
+    }),
+    createRoute: builder.mutation({
+      query: (routeData) => ({
+        url: '/admin/create-route',
+        method: 'POST',
+        body: routeData,
+      }),
+    }),
   }),
 });
 
@@ -72,6 +86,8 @@ export const {
   useCreateScheduleMutation,
   useCreateDriverMutation,
   useCreateHelperMutation,
+  useCreateBusMutation,
+  useCreateRouteMutation,
   useGetSchedulesQuery,
   useGetDriversQuery,
   useGetHelpersQuery,
