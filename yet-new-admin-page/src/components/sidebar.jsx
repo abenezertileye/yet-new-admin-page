@@ -5,6 +5,8 @@ const SideBar = ({ children }) => {
   return (
     <div className="admin-layout">
       <nav className="sidebar">
+        <h3>Admin Panel</h3>
+
         <ul>
           <li>
             <NavLink to="/schedules">Schedules</NavLink>
