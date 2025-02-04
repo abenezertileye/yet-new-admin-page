@@ -37,6 +37,8 @@ const SchedulesPage = () => {
     e.preventDefault();
     try {
       await createSchedule(formData).unwrap();
+      alert("Schedule created successfully!");
+
       setFormData({
         schedule_name: "",
         driverId: "",
@@ -67,10 +69,10 @@ const SchedulesPage = () => {
   return (
     <SideBar>
       <section className="schedules">
-        <h3>Schedules</h3>
         <button onClick={() => setFormVisible(!formVisible)}>
           {formVisible ? "Hide Create Schedule Form" : "Create Schedule"}
         </button>
+        <h3>Schedules</h3>
 
         {formVisible && (
           <form onSubmit={handleFormSubmit} className="create-schedule-form">
